@@ -1,24 +1,16 @@
 import React from 'react';
-import logo from './logo.svg';
+import Clock from './components/Clock';
 import './App.css';
 
-function App() {
+let testProp: string = 'Am I getting passed to the clock component?'
+let optionalProp: string = 'You sure are!'
+
+const App: React.FunctionComponent = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <div className="verticalCenter">
+        <Clock testProp={testProp} optionalProp={optionalProp}/>
+     </div>
     </div>
   );
 }
